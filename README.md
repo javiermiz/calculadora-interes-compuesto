@@ -1,54 +1,118 @@
-# React + TypeScript + Vite
+# Calculadora de Interés Compuesto
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Una aplicación web moderna para calcular y visualizar el crecimiento de inversiones a lo largo del tiempo utilizando el interés compuesto. Desarrollada con React, TypeScript y Tailwind CSS, siguiendo los principios de Atomic Design.
 
-Currently, two official plugins are available:
+## 🚀 Características
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- **Cálculo de Interés Compuesto**: Simula el crecimiento de inversiones considerando:
+  - Inversión inicial
+  - Contribuciones mensuales
+  - Tasa de retorno anual
+  - Período de inversión
 
-## Expanding the ESLint configuration
+- **Visualización de Resultados**:
+  - Resumen de resultados con total invertido, total acumulado y ganancia
+  - Gráfico interactivo que muestra la evolución de la inversión
+  - Formato de moneda en euros
+  - Diseño responsivo para todos los dispositivos
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+- **Interfaz de Usuario**:
+  - Diseño moderno y limpio
+  - Formulario intuitivo con validación
+  - Actualización en tiempo real de los resultados
+  - Componentes reutilizables siguiendo Atomic Design
 
-```js
-export default tseslint.config({
-  extends: [
-    // Remove ...tseslint.configs.recommended and replace with this
-    ...tseslint.configs.recommendedTypeChecked,
-    // Alternatively, use this for stricter rules
-    ...tseslint.configs.strictTypeChecked,
-    // Optionally, add this for stylistic rules
-    ...tseslint.configs.stylisticTypeChecked,
-  ],
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
+## 🛠️ Tecnologías Utilizadas
+
+- **Frontend**:
+  - React 18
+  - TypeScript
+  - Tailwind CSS
+  - Chart.js (para visualización de datos)
+  - Vite (como bundler)
+
+- **Arquitectura**:
+  - Atomic Design para la organización de componentes
+  - Componentes funcionales con Hooks
+  - Tipado estático con TypeScript
+
+## 📦 Instalación
+
+1. Clona el repositorio:
+   ```bash
+   git clone https://github.com/tu-usuario/calculadora-interes-compuesto.git
+   cd calculadora-interes-compuesto
+   ```
+
+2. Instala las dependencias:
+   ```bash
+   npm install
+   ```
+
+3. Inicia el servidor de desarrollo:
+   ```bash
+   npm run dev
+   ```
+
+4. Abre [http://localhost:5173](http://localhost:5173) en tu navegador.
+
+## 🏗️ Estructura del Proyecto
+
+```
+src/
+├── components/
+│   ├── atoms/          # Componentes básicos (Input, ResultCard)
+│   ├── molecules/      # Componentes compuestos (InputGroup, ResultsGrid)
+│   ├── organisms/      # Componentes complejos (CalculatorForm, ResultsSection)
+│   └── templates/      # Plantillas de página (CalculatorTemplate)
+├── App.tsx            # Componente principal
+└── main.tsx          # Punto de entrada
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+## 💻 Uso
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+1. Ingresa la inversión inicial
+2. Especifica la contribución mensual
+3. Define la tasa de retorno anual esperada
+4. Selecciona el período de inversión en años
+5. Los resultados se actualizarán automáticamente mostrando:
+   - Total invertido
+   - Total acumulado
+   - Ganancia total
+   - Gráfico de proyección
 
-export default tseslint.config({
-  plugins: {
-    // Add the react-x and react-dom plugins
-    'react-x': reactX,
-    'react-dom': reactDom,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended typescript rules
-    ...reactX.configs['recommended-typescript'].rules,
-    ...reactDom.configs.recommended.rules,
-  },
-})
+## 🎨 Diseño
+
+El proyecto sigue los principios de Atomic Design:
+
+- **Atoms**: Componentes básicos como inputs y tarjetas de resultados
+- **Molecules**: Grupos de inputs y grids de resultados
+- **Organisms**: Formularios y secciones de resultados
+- **Templates**: Plantilla principal de la calculadora
+
+## 🧪 Pruebas
+
+Para ejecutar las pruebas:
+```bash
+npm test
 ```
+
+## 📝 Licencia
+
+Este proyecto está bajo la Licencia MIT. Ver el archivo `LICENSE` para más detalles.
+
+## 🤝 Contribuciones
+
+Las contribuciones son bienvenidas. Por favor, sigue estos pasos:
+
+1. Haz un Fork del proyecto
+2. Crea una rama para tu feature (`git checkout -b feature/AmazingFeature`)
+3. Commit tus cambios (`git commit -m 'Add some AmazingFeature'`)
+4. Push a la rama (`git push origin feature/AmazingFeature`)
+5. Abre un Pull Request
+
+## 📧 Contacto
+
+Tu Nombre - [@tutwitter](https://twitter.com/tutwitter) - email@ejemplo.com
+
+Link del Proyecto: [https://github.com/tu-usuario/calculadora-interes-compuesto](https://github.com/tu-usuario/calculadora-interes-compuesto)
