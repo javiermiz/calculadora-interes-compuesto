@@ -9,7 +9,6 @@ import {
   Legend,
 } from 'chart.js'
 import type {
-  ChartType,
   ChartData,
   ChartOptions,
 } from 'chart.js'
